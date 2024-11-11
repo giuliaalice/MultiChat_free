@@ -39,7 +39,7 @@ def split_text_into_chunks(texts):
     return chunks_with_metadata
 
 def build_vectorstore(text_chunks):
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-distilroberta-v1")
     texts = [chunk["text"] for chunk in text_chunks]
     metadatas = [chunk["metadata"] for chunk in text_chunks]
     return FAISS.from_texts(texts=texts, embedding=embeddings, metadatas=metadatas)
@@ -71,7 +71,7 @@ def main():
 
     user_question = st.text_input("Ask a question about your documents:")
     if user_question and st.session_state.vectorstore:
-        qa_pipeline = pipeline("question-answering", model="deepset/roberta-large-squad2", device=-1)
+        qa_pipeline = pipeline("question-answering", model="google/flan-t5-large", device=-1)
         handle_user_query(user_question, st.session_state.vectorstore, qa_pipeline)
 
     with st.sidebar:
