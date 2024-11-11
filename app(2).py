@@ -71,7 +71,7 @@ def main():
 
     user_question = st.text_input("Ask a question about your documents:")
     if user_question and st.session_state.vectorstore:
-        qa_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2", device=-1)
+        qa_pipeline = pipeline("question-answering", model="deepset/roberta-large-squad2", device=-1)
         handle_user_query(user_question, st.session_state.vectorstore, qa_pipeline)
 
     with st.sidebar:
