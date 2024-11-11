@@ -6,3 +6,4 @@ tiktoken
 transformers
 torch
 huggingface-hub
+langchain-community
