@@ -1,26 +1,24 @@
-# Core ML and GPU Support
-torch==2.7.1
+# Core Torch stack - compatibile tra loro
+torch==2.3.1
 torchvision==0.18.1
-torchaudio==2.7.1
+torchaudio==2.3.1
 
-# Numerical Computing
+# Computazione scientifica
 numpy==1.26.4
 scipy==1.11.4
 
-# Transformers and NLP
+# NLP e modelli
 transformers==4.41.2
 sentence-transformers==4.1.0
-
-# LangChain and Vector DBs
-langchain==0.2.0
-langchain-community==0.2.0
-faiss-cpu==1.7.4  
-
-# Embeddings
 sentencepiece==0.1.99
 huggingface-hub>=0.22.2
 
-# Web Interface
+# LangChain e FAISS
+langchain==0.2.0
+langchain-community==0.2.0
+faiss-cpu==1.7.4
+
+# Web app
 streamlit==1.35.0
 
 # Utility
