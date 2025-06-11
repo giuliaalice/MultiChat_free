@@ -1,27 +1,23 @@
-# Core Torch stack - compatibile tra loro
-torch==2.3.1
-torchvision==0.18.1
-torchaudio==2.3.1
+# Core
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
 
-# Computazione scientifica
-numpy==1.26.4
-scipy==1.11.4
+# Inference & embeddings
+transformers>=4.40.0
+sentence-transformers>=2.6.1
+sentencepiece==0.1.96  # evita il problema di compilazione su Py 3.12
 
-# NLP e modelli
-transformers==4.41.2
-sentence-transformers==4.1.0
-sentencepiece==0.1.99
-huggingface-hub>=0.22.2
+# Vector store & LLM
+langchain>=0.2.0
+langchain-community>=0.0.20
 
-# LangChain e FAISS
-langchain==0.2.0
-langchain-community==0.2.0
-faiss-cpu==1.7.4
+# Math & utils
+numpy>=1.26
+scipy>=1.11
 
-# Web app
-streamlit==1.35.0
+# Frontend
+streamlit>=1.33.0
 
-# Utility
-scikit-learn==1.4.2
-pandas==2.2.2
-tqdm==4.66.4
+# (opzionale ma spesso richiesto)
+faiss-cpu>=1.7.4
