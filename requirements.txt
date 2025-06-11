@@ -1,23 +1,32 @@
-# Core
-torch==2.2.2
-torchvision==0.17.2
-torchaudio==2.2.2
+# LLM e pipeline
+transformers
+torch
+torchvision
+torchaudio
 
-# Inference & embeddings
-transformers>=4.40.0
-sentence-transformers>=2.6.1
-sentencepiece==0.1.96  # evita il problema di compilazione su Py 3.12
+# DeepSeek
+accelerate # consigliato da deepseek
+safetensors
 
-# Vector store & LLM
-langchain>=0.2.0
-langchain-community>=0.0.20
+# PDF reading
+PyPDF2
 
-# Math & utils
-numpy>=1.26
-scipy>=1.11
+# LangChain stack (versioni aggiornate e non deprecate)
+langchain
+langchain-community
+sentence-transformers
+sentencepiece # compatibile con Py 3.12
 
-# Frontend
-streamlit>=1.33.0
+# Vector store
+faiss-cpu
 
-# (opzionale ma spesso richiesto)
-faiss-cpu>=1.7.4
+# Embeddings
+huggingface-hub
+
+# Streamlit frontend
+streamlit
+
+# Utils
+pandas
+numpy
+scipy
